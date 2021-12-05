@@ -1,0 +1,11 @@
+services:
+  inso-cli:
+    container_name: inso-cli
+    image: inso-cli:latest
+    network_mode: none
+    build:
+      context: build/inso-cli
+    volumes:
+      - ./run:/workdir:ro
+    environment:
+      TERM: dumb
